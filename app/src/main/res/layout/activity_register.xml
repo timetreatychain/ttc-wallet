@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F7F7"
+    android:orientation="vertical"
+    tools:context="com.example.administrator.ttc.login_acitivty.RegisterActivity">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:background="#FFFFFF">
+
+        <ImageView
+            android:id="@+id/register_back_img"
+            android:layout_width="16px"
+            android:layout_height="29px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20px"
+            android:src="@drawable/back_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="注册申请"
+            android:textColor="#333333"
+            android:textSize="32px" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#F3F3F3" />
+
+    <ImageView
+        android:layout_width="99px"
+        android:layout_height="109px"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10px"
+        android:layout_marginTop="41px"
+        android:src="@drawable/app_icon" />
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="249px"
+        android:layout_height="65px"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="一个区块身份"
+            android:textColor="#666666"
+            android:textSize="28px" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="畅行整个区块链生态"
+            android:textColor="#666666"
+            android:textSize="28px" />
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="103px"
+        android:layout_marginRight="103px"
+        android:layout_marginTop="71px"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="35px"
+            android:layout_height="35px"
+            android:src="@mipmap/login_id" />
+
+        <EditText
+            android:id="@+id/register_phone_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="21px"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="请输入手机号码"
+            android:inputType="number"
+            android:textSize="24px" />
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="98px"
+        android:layout_marginRight="98px"
+        android:layout_marginTop="10px"
+        android:background="#C3C3C3" />
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="103px"
+        android:layout_marginRight="103px"
+        android:layout_marginTop="42px"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="35px"
+            android:layout_height="35px"
+            android:src="@mipmap/register_dun" />
+
+        <EditText
+            android:id="@+id/register_code_edit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="21px"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="请输入短信验证码"
+            android:inputType="textPassword|number"
+            android:textSize="24px" />
+
+        <TextView
+            android:id="@+id/register_getCode_text"
+            android:layout_width="106px"
+            android:layout_height="36px"
+            android:layout_marginRight="8px"
+            android:background="@drawable/register_getcode_style"
+            android:gravity="center"
+            android:text="获取验证码"
+            android:textColor="#169BD5"
+            android:textSize="18px" />
+
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="98px"
+        android:layout_marginRight="98px"
+        android:layout_marginTop="10px"
+        android:background="#C3C3C3" />
+
+    <Button
+        android:id="@+id/register_next_button"
+        android:layout_width="match_parent"
+        android:layout_height="58px"
+        android:layout_marginBottom="16px"
+        android:layout_marginLeft="98px"
+        android:layout_marginRight="98px"
+        android:layout_marginTop="72px"
+        android:background="@drawable/login_button_style"
+        android:gravity="center"
+        android:text="下一步"
+        android:textColor="#FFFFFF"
+        android:textSize="24px" />
+
+    <TextView
+        android:id="@+id/register_login_text"
+        android:layout_width="79px"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="98px"
+        android:layout_marginTop="16px"
+        android:text="立即登录"
+        android:textColor="#169BD5"
+        android:textSize="20px" />
+
+</com.zhy.autolayout.AutoLinearLayout>

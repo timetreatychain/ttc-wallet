@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:orientation="horizontal">
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="21px"
+        android:layout_marginLeft="20px"
+        android:layout_marginTop="21px"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/bd_item_id"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginBottom="3.5px"
+            android:layout_weight="1"
+            android:gravity="bottom"
+            android:text="区块ID 456789转入"
+            android:textColor="#333333"
+            android:textSize="24px" />
+
+        <TextView
+            android:id="@+id/bd_item_time"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="3.5px"
+            android:layout_weight="1"
+            android:gravity="top"
+            android:text="区块ID 456789转入"
+            android:textColor="#999999"
+            android:textSize="20px" />
+
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/bd_item_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="20px"
+        android:text="+1500.00BIDT"
+        android:textColor="#6E86D3" />
+
+</com.zhy.autolayout.AutoLinearLayout>

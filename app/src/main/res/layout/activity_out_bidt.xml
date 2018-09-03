@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F7F7"
+    android:orientation="vertical"
+    tools:context="com.example.administrator.ttc.zichan_activity.OutBidtActivity">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:background="#FFFFFF">
+
+        <ImageView
+            android:id="@+id/out_back_img"
+            android:layout_width="16px"
+            android:layout_height="29px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20px"
+            android:src="@drawable/back_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="转出BIDT"
+            android:textColor="#333333"
+            android:textSize="32px" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#F3F3F3" />
+
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/out_id_edit"
+            android:layout_width="match_parent"
+            android:layout_height="88px"
+            android:background="#FFFFFF"
+            android:hint="对方区块身份ID"
+            android:inputType="number"
+            android:paddingLeft="19px"
+            android:textColor="#333333"
+            android:textColorHint="#999999"
+            android:textSize="24px" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="20px"
+            android:background="#F3F3F3" />
+
+
+        <EditText
+            android:id="@+id/out_num_edit"
+            android:layout_width="match_parent"
+            android:layout_height="88px"
+            android:background="#FFFFFF"
+            android:hint="转出数额"
+            android:inputType="number"
+            android:paddingLeft="19px"
+            android:textColor="#333333"
+            android:textColorHint="#999999"
+            android:textSize="24px" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="20px"
+            android:background="#F3F3F3" />
+
+
+        <EditText
+            android:id="@+id/out_name_edit"
+            android:layout_width="match_parent"
+            android:layout_height="88px"
+            android:background="#FFFFFF"
+            android:hint="备注"
+            android:paddingLeft="19px"
+            android:textColor="#333333"
+            android:textColorHint="#999999"
+            android:textSize="24px" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="20px"
+            android:background="#F3F3F3" />
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90px"
+            android:background="#FFFFFF"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="21px"
+                android:layout_marginRight="65px"
+                android:text="矿工费用"
+                android:textColor="#999999"
+                android:textSize="24px" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/out_kg_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20px"
+                android:text="20bidt"
+                android:textColor="#999999"
+                android:textSize="24px" />
+
+        </com.zhy.autolayout.AutoLinearLayout>
+
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20px"
+        android:layout_marginTop="10px"
+        android:text="仅限币达钱包互转"
+        android:textColor="#333333"
+        android:textSize="20px" />
+
+    <Button
+        android:id="@+id/out_next_button"
+        android:layout_width="match_parent"
+        android:layout_height="62px"
+        android:layout_marginLeft="95px"
+        android:layout_marginRight="95px"
+        android:layout_marginTop="74px"
+        android:background="@drawable/out_button_style"
+        android:gravity="center"
+        android:text="下一步"
+        android:textColor="#FFFFFF"
+        android:textSize="24px" />
+
+</com.zhy.autolayout.AutoLinearLayout>

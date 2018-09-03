@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F7F7"
+    android:orientation="vertical">
+
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="226px"
+        android:background="@drawable/myself_header"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/myself_header_img"
+            android:layout_width="80px"
+            android:layout_height="80px"
+            android:layout_marginLeft="20px"
+            android:layout_marginTop="101px"
+            android:src="@drawable/header" />
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="11px"
+            android:layout_marginTop="112px"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/myself_id_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="123456"
+                android:textColor="#333333"
+                android:textSize="32px"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10px"
+                android:text="可登录TTC生态内各DApps"
+                android:textColor="#999999"
+                android:textSize="18px"
+                android:textStyle="bold" />
+
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/myself_setting_img"
+            android:layout_width="34px"
+            android:layout_height="34px"
+            android:layout_marginRight="20px"
+            android:layout_marginTop="68px"
+            android:src="@drawable/setting" />
+
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10px"
+        android:background="#FFFFFF"
+        android:orientation="vertical">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/myself_jy"
+            android:layout_width="match_parent"
+            android:layout_height="88px"
+            android:background="#FFFFFF"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="32px"
+                android:layout_height="32px"
+                android:layout_marginLeft="22px"
+                android:src="@drawable/jy_record" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20px"
+                android:text="交易记录"
+                android:textColor="#333333"
+                android:textSize="24px" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:layout_width="10px"
+                android:layout_height="18px"
+                android:layout_marginRight="20px"
+                android:src="@drawable/right" />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="20px"
+            android:background="#F3F3F3" />
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/myself_message"
+            android:layout_width="match_parent"
+            android:layout_height="88px"
+            android:background="#FFFFFF"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="32px"
+                android:layout_height="32px"
+                android:layout_marginLeft="22px"
+                android:src="@drawable/xiaoxi" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20px"
+                android:text="消息中心"
+                android:textColor="#333333"
+                android:textSize="24px" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:layout_width="10px"
+                android:layout_height="18px"
+                android:layout_marginRight="20px"
+                android:src="@drawable/right" />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10px"
+        android:background="#FFFFFF"
+        android:orientation="vertical">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/myself_sf"
+            android:layout_width="match_parent"
+            android:layout_height="88px"
+            android:background="#FFFFFF"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="32px"
+                android:layout_height="32px"
+                android:layout_marginLeft="22px"
+                android:src="@drawable/shenfenzheng" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20px"
+                android:text="身份认证"
+                android:textColor="#333333"
+                android:textSize="24px" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:layout_width="10px"
+                android:layout_height="18px"
+                android:layout_marginRight="20px"
+                android:src="@drawable/right" />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="20px"
+            android:background="#F3F3F3" />
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/myself_aq"
+            android:layout_width="match_parent"
+            android:layout_height="88px"
+            android:background="#FFFFFF"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="32px"
+                android:layout_height="32px"
+                android:layout_marginLeft="22px"
+                android:src="@drawable/anquan" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20px"
+                android:text="安全中心"
+                android:textColor="#333333"
+                android:textSize="24px" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:layout_width="10px"
+                android:layout_height="18px"
+                android:layout_marginRight="20px"
+                android:src="@drawable/right" />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:orientation="vertical">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/myself_sq"
+            android:layout_width="match_parent"
+            android:layout_height="88px"
+            android:background="#FFFFFF"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="32px"
+                android:layout_height="32px"
+                android:layout_marginLeft="22px"
+                android:src="@drawable/shequn" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20px"
+                android:text="加入社群"
+                android:textColor="#333333"
+                android:textSize="24px" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:layout_width="10px"
+                android:layout_height="18px"
+                android:layout_marginRight="20px"
+                android:src="@drawable/right" />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="20px"
+            android:background="#F3F3F3" />
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/myself_kf"
+            android:layout_width="match_parent"
+            android:layout_height="88px"
+            android:background="#FFFFFF"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="32px"
+                android:layout_height="32px"
+                android:layout_marginLeft="22px"
+                android:src="@drawable/kefu" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20px"
+                android:text="在线客服"
+                android:textColor="#333333"
+                android:textSize="24px" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:layout_width="10px"
+                android:layout_height="18px"
+                android:layout_marginRight="20px"
+                android:src="@drawable/right" />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+    </com.zhy.autolayout.AutoLinearLayout>
+
+</com.zhy.autolayout.AutoLinearLayout>

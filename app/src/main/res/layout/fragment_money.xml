@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="302px"
+        android:background="@drawable/main_head"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="119px"
+            android:gravity="center"
+            android:text="总资产（¥）"
+            android:textColor="#FFFEFE"
+            android:textSize="24px" />
+
+        <TextView
+            android:id="@+id/money_num_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="161px"
+            android:gravity="center"
+            android:text="≈850.00"
+            android:textColor="#FFFFFF"
+            android:textSize="46px" />
+
+        <ImageView
+            android:id="@+id/message_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="25px"
+            android:layout_marginTop="43px"
+            android:src="@drawable/message_icon" />
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="88px">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/ttc_linear"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/bidt_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BIDT"
+                android:textColor="#333333"
+                android:textSize="24px" />
+
+            <TextView
+                android:id="@+id/ttc_num_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="≈¥200.00"
+                android:textColor="#556CB4"
+                android:textSize="24px" />
+
+        </com.zhy.autolayout.AutoLinearLayout>
+
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/eth_linear"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#EFEFEF"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/eth_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ETH"
+                android:textColor="#333333"
+                android:textSize="24px" />
+
+            <TextView
+                android:id="@+id/eth_num_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="≈¥0.00"
+                android:textColor="#9c9c9c"
+                android:textSize="24px" />
+
+
+        </com.zhy.autolayout.AutoLinearLayout>
+
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <com.zhy.autolayout.AutoFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <include
+            android:id="@+id/frame_bidt"
+            layout="@layout/money_frame_bidt" />
+
+        <include
+            android:id="@+id/frame_eth"
+            layout="@layout/money_frame_eth"
+            android:visibility="gone" />
+
+    </com.zhy.autolayout.AutoFrameLayout>
+
+</com.zhy.autolayout.AutoLinearLayout>

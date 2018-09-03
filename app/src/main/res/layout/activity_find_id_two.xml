@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F7F7"
+    android:orientation="vertical"
+    tools:context="com.example.administrator.ttc.login_acitivty.FindIdTwoActivity">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:background="#FFFFFF">
+
+        <ImageView
+            android:id="@+id/findIdTwo_back_img"
+            android:layout_width="16px"
+            android:layout_height="29px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20px"
+            android:src="@drawable/back_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="找回区块身份ID"
+            android:textColor="#333333"
+            android:textSize="32px" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#F3F3F3" />
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="189px"
+        android:background="#FFFFFF"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="58px"
+            android:text="以下为该手机绑定的区块ID"
+            android:textColor="#999999"
+            android:textSize="24px" />
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="33px"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="区块身份ID："
+                android:textColor="#333333"
+                android:textSize="24px" />
+
+            <TextView
+                android:id="@+id/findIdTwo_id_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="123456"
+                android:textColor="#FDBE00"
+                android:textSize="24px"
+                android:textStyle="bold" />
+
+        </com.zhy.autolayout.AutoLinearLayout>
+
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <Button
+        android:id="@+id/findIdTwo_login_button"
+        android:layout_width="match_parent"
+        android:layout_height="58px"
+        android:layout_marginBottom="16px"
+        android:layout_marginLeft="98px"
+        android:layout_marginRight="98px"
+        android:layout_marginTop="72px"
+        android:background="@drawable/login_button_style"
+        android:gravity="center"
+        android:text="返回登录"
+        android:textColor="#FFFFFF"
+        android:textSize="24px" />
+
+    <Button
+        android:id="@+id/findIdTwo_resetPwd_button"
+        android:layout_width="match_parent"
+        android:layout_height="58px"
+        android:layout_marginBottom="16px"
+        android:layout_marginLeft="98px"
+        android:layout_marginRight="98px"
+        android:layout_marginTop="28px"
+        android:background="@drawable/register_getcode_style"
+        android:gravity="center"
+        android:text="重置密码"
+        android:textColor="#169BD5"
+        android:textSize="24px" />
+
+</com.zhy.autolayout.AutoLinearLayout>

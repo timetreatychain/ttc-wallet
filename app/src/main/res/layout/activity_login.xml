@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F7F7"
+    android:orientation="vertical"
+    tools:context="com.example.administrator.ttc.login_acitivty.LoginActivity">
+
+    <ImageView
+        android:layout_width="99px"
+        android:layout_height="109px"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10px"
+        android:layout_marginTop="169px"
+        android:src="@drawable/app_icon" />
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="249px"
+        android:layout_height="65px"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="一个区块身份"
+            android:textColor="#666666"
+            android:textSize="28px" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="畅行整个区块链生态"
+            android:textColor="#666666"
+            android:textSize="28px" />
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="103px"
+        android:layout_marginRight="103px"
+        android:layout_marginTop="71px"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="35px"
+            android:layout_height="35px"
+            android:src="@mipmap/login_id" />
+
+        <EditText
+            android:id="@+id/login_id_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="21px"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="区块ID"
+            android:textSize="24px" />
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="98px"
+        android:layout_marginRight="98px"
+        android:layout_marginTop="10px"
+        android:background="#C3C3C3" />
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="103px"
+        android:layout_marginRight="103px"
+        android:layout_marginTop="42px"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="35px"
+            android:layout_height="35px"
+            android:src="@mipmap/login_lock" />
+
+        <EditText
+            android:id="@+id/login_password_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="21px"
+            android:background="@null"
+            android:hint="密码"
+            android:inputType="textPassword"
+            android:textSize="24px" />
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="98px"
+        android:layout_marginRight="98px"
+        android:layout_marginTop="10px"
+        android:background="#C3C3C3" />
+
+    <TextView
+        android:id="@+id/login_forget_password"
+        android:layout_width="78px"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="99px"
+        android:layout_marginTop="12px"
+        android:text="忘记密码"
+        android:textColor="#999999"
+        android:textSize="20px" />
+
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="match_parent"
+        android:layout_height="58px"
+        android:layout_marginBottom="16px"
+        android:layout_marginLeft="98px"
+        android:layout_marginRight="98px"
+        android:layout_marginTop="69px"
+        android:background="@drawable/login_button_style"
+        android:gravity="center"
+        android:text="登录"
+        android:textColor="#FFFFFF"
+        android:textSize="24px" />
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="还没有拥有区块身份？"
+            android:textColor="#333333"
+            android:textSize="20px" />
+
+        <TextView
+            android:id="@+id/login_register_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="申请注册"
+            android:textColor="#169BD5"
+            android:textSize="20px" />
+    </com.zhy.autolayout.AutoLinearLayout>
+
+</com.zhy.autolayout.AutoLinearLayout>

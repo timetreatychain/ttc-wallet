@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/message_gonggao"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="20px"
+        android:paddingLeft="20px"
+        android:paddingRight="20px"
+        android:paddingTop="20px">
+
+        <ImageView
+            android:id="@+id/message_gonggao_icon"
+            android:layout_width="22px"
+            android:layout_height="22px"
+            android:src="@drawable/gonggao_no" />
+
+        <TextView
+            android:id="@+id/message_gonggao_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10px"
+            android:text="公告"
+            android:textColor="#999999"
+            android:textSize="20px" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/message_gonggao_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2018-08-22"
+            android:textColor="#999999"
+            android:textSize="20px" />
+
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <TextView
+        android:id="@+id/message_gonggao_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="19px"
+        android:paddingLeft="20px"
+        android:text="TTC钱包已开通支持BIDT互转，欢迎使用！"
+        android:textColor="#999999"
+        android:textSize="22px" />
+</com.zhy.autolayout.AutoLinearLayout>
