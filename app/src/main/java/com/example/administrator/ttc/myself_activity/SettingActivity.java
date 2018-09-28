@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import com.example.administrator.ttc.R;
 import com.example.administrator.ttc.login_acitivty.LoginActivity;
 import com.wb.baselib.base.activity.BaseActivity;
+import com.wb.baselib.utils.SharedPrefsUtil;
 import com.zhy.autolayout.AutoLinearLayout;
 
 public class SettingActivity extends BaseActivity {
@@ -61,6 +62,8 @@ public class SettingActivity extends BaseActivity {
         } else if (id == R.id.setting_about_our) {
             showShortToast("关于我们");
         } else if (id == R.id.setting_logout_btn) {
+            SharedPrefsUtil.putValue(this, "blockId", "blockId", "");
+            SharedPrefsUtil.putValue(this, "token", "token", "");
             Intent intent = new Intent(this, LoginActivity.class);
             ComponentName cn = intent.getComponent();
             Intent mainIntent = IntentCompat.makeRestartActivityTask(cn);//ComponentInfo{包名+类名}

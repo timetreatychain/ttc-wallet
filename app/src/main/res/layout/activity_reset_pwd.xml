@@ -90,7 +90,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="9px"
                 android:text="重置密码"
-                android:textColor="#169BD5"
+                android:textColor="#6A82CE"
                 android:textSize="22px" />
 
         </com.zhy.autolayout.AutoLinearLayout>
@@ -167,7 +167,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="20px"
                 android:text="获取验证码"
-                android:textColor="#8FC8F4"
+                android:textColor="#6A82CE"
                 android:textSize="24px" />
 
         </com.zhy.autolayout.AutoLinearLayout>

@@ -1,9 +1,7 @@
 package com.example.administrator.ttc.login_acitivty;
 
-import android.graphics.Color;
-import android.os.Build;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -11,8 +9,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.administrator.ttc.R;
+import com.example.administrator.ttc.RequestUtils;
+import com.squareup.okhttp.Request;
 import com.wb.baselib.base.activity.BaseActivity;
-import com.wb.baselib.utils.ToActivityUtil;
+import com.wb.baselib.utils.SharedPrefsUtil;
+import com.zhy.http.okhttp.OkHttpUtils;
+import com.zhy.http.okhttp.callback.StringCallback;
 
 public class SetPwdActivity extends BaseActivity implements View.OnClickListener {
 
@@ -21,19 +23,26 @@ public class SetPwdActivity extends BaseActivity implements View.OnClickListener
     private EditText setPwd_set_edit;
     private EditText setPwd_againSet_edit;
     private Button setPwd_sure_button;
+    private String blockId;
+    private String token;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_set_pwd);
-        if (Build.VERSION.SDK_INT >= 21) {
-            View decorView = getWindow().getDecorView();
-            int option = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                    | View.SYSTEM_UI_FLAG_LAYOUT_STABLE;
-            decorView.setSystemUiVisibility(option);
-            getWindow().setStatusBarColor(Color.TRANSPARENT);
-        }
+        blockId = SharedPrefsUtil.getValue(this, "blockId", "blockId", "");
+        token = SharedPrefsUtil.getValue(this, "token", "token", "");
+//        if (Build.VERSION.SDK_INT >= 21) {
+//            View decorView = getWindow().getDecorView();
+//            int option = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+//                    | View.SYSTEM_UI_FLAG_LAYOUT_STABLE;
+//            decorView.setSystemUiVisibility(option);
+//            getWindow().setStatusBarColor(Color.TRANSPARENT);
+//        }
         initView(savedInstanceState);
+        Log.e("blockId", blockId);
+        Log.e("token", token);
+        setPwd_id_text.setText(blockId);
     }
 
     @Override
@@ -72,7 +81,25 @@ public class SetPwdActivity extends BaseActivity implements View.OnClickListener
             } else if (!newPwd.equals(surePwd)) {
                 showShortToast("两次输入的密码不一致");
             } else {
-                finish();
+                OkHttpUtils.post().url(RequestUtils.REQUEST_HEAD + RequestUtils.UPDATE_PWD)
+                        .addParams("pwd", newPwd)
+                        .addParams("token", token)
+                        .addParams("blockId", blockId)
+                        .build()
+                        .execute(new StringCallback() {
+                            @Override
+                            public void onError(Request request, Exception e) {
+                                Log.e("失败：", e.toString());
+                                showShortToast(e.toString());
+                            }
+
+                            @Override
+                            public void onResponse(String response) {
+                                Log.e("成功：", response);
+                                showShortToast("注册成功");
+                                finish();
+                            }
+                        });
             }
         }
     }

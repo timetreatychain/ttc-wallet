@@ -25,7 +25,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="161px"
             android:gravity="center"
-            android:text="≈850.00"
+            android:text="≈0.00"
             android:textColor="#FFFFFF"
             android:textSize="46px" />
 
@@ -65,7 +65,7 @@
                 android:id="@+id/ttc_num_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="≈¥200.00"
+                android:text="≈¥0.00"
                 android:textColor="#556CB4"
                 android:textSize="24px" />
 

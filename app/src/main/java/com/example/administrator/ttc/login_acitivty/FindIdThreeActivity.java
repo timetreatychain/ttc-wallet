@@ -1,19 +1,19 @@
 package com.example.administrator.ttc.login_acitivty;
 
-import android.graphics.Color;
-import android.os.Build;
-import android.support.annotation.RequiresApi;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 
 import com.example.administrator.ttc.R;
-import com.thefinestartist.Base;
+import com.example.administrator.ttc.RequestUtils;
+import com.squareup.okhttp.Request;
 import com.wb.baselib.base.activity.BaseActivity;
-import com.wb.baselib.utils.ToActivityUtil;
+import com.wb.baselib.utils.SharedPrefsUtil;
+import com.zhy.http.okhttp.OkHttpUtils;
+import com.zhy.http.okhttp.callback.StringCallback;
 
 public class FindIdThreeActivity extends BaseActivity implements View.OnClickListener {
 
@@ -21,18 +21,22 @@ public class FindIdThreeActivity extends BaseActivity implements View.OnClickLis
     private EditText findIdThree_newPwd_text;
     private EditText findIdThree_surePwd_text;
     private Button findIdThree_button;
+    private String token;
+    private String blockId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_find_id_three);
-        if (Build.VERSION.SDK_INT >= 21) {
-            View decorView = getWindow().getDecorView();
-            int option = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                    | View.SYSTEM_UI_FLAG_LAYOUT_STABLE;
-            decorView.setSystemUiVisibility(option);
-            getWindow().setStatusBarColor(Color.TRANSPARENT);
-        }
+        token = SharedPrefsUtil.getValue(this, "token", "token", "");
+        blockId = SharedPrefsUtil.getValue(this, "blockId", "blockId", "");
+//        if (Build.VERSION.SDK_INT >= 21) {
+//            View decorView = getWindow().getDecorView();
+//            int option = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+//                    | View.SYSTEM_UI_FLAG_LAYOUT_STABLE;
+//            decorView.setSystemUiVisibility(option);
+//            getWindow().setStatusBarColor(Color.TRANSPARENT);
+//        }
         initView(savedInstanceState);
     }
 
@@ -71,7 +75,25 @@ public class FindIdThreeActivity extends BaseActivity implements View.OnClickLis
             } else if (!newPwd.equals(surePwd)) {
                 showShortToast("两次输入的密码不一致");
             } else {
-                finish();
+                OkHttpUtils.post().url(RequestUtils.REQUEST_HEAD + RequestUtils.FIND_UPDATE_PWD)
+                        .addParams("pwd", newPwd)
+                        .addParams("token", token)
+                        .addParams("blockId", blockId)
+                        .build()
+                        .execute(new StringCallback() {
+                            @Override
+                            public void onError(Request request, Exception e) {
+                                Log.e("失败：", e.toString());
+                                showShortToast(e.getMessage());
+                            }
+
+                            @Override
+                            public void onResponse(String response) {
+                                Log.e("找回ID重置密码成功：", response);
+                                showShortToast("重置密码成功");
+                                finish();
+                            }
+                        });
             }
         }
     }

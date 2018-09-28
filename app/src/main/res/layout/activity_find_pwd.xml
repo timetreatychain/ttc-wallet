@@ -60,7 +60,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="9px"
                 android:text="验证身份"
-                android:textColor="#169BD5"
+                android:textColor="#6A82CE"
                 android:textSize="22px" />
 
         </com.zhy.autolayout.AutoLinearLayout>
@@ -146,7 +146,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="22px"
         android:text="忘记区块ID"
-        android:textColor="#169BD5"
+        android:textColor="#6A82CE"
         android:textSize="24px" />
 
 </com.zhy.autolayout.AutoLinearLayout>

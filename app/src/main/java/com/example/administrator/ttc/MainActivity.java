@@ -7,7 +7,6 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.view.View;
-import android.view.ViewParent;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
@@ -15,9 +14,6 @@ import com.example.administrator.ttc.adapter.MainFragmentPageAdapter;
 import com.example.administrator.ttc.fragment.JyFragment;
 import com.example.administrator.ttc.fragment.MoneyFragment;
 import com.example.administrator.ttc.fragment.MyselfFragment;
-import com.wb.baselib.base.activity.BaseActivity;
-import com.wb.baselib.base.fragment.BaseFragment;
-import com.wb.baselib.view.BottomBarView;
 
 import java.util.ArrayList;
 import java.util.List;

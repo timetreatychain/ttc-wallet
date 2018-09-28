@@ -13,7 +13,7 @@ import android.widget.Toast;
 import com.example.administrator.ttc.R;
 import com.example.administrator.ttc.myself_activity.MessageActivity;
 import com.example.administrator.ttc.myself_activity.SettingActivity;
-import com.wb.baselib.base.fragment.LazyFragment;
+import com.wb.baselib.utils.SharedPrefsUtil;
 import com.wb.baselib.utils.ToActivityUtil;
 import com.zhy.autolayout.AutoLinearLayout;
 
@@ -32,10 +32,12 @@ public class MyselfFragment extends Fragment implements View.OnClickListener {
     private AutoLinearLayout myself_aq;
     private AutoLinearLayout myself_sq;
     private AutoLinearLayout myself_kf;
+    private String blockId;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_myself, container, false);
+        blockId = SharedPrefsUtil.getValue(getContext(), "blockId", "blockId", "");
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             getActivity().getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN | View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
         }
@@ -43,6 +45,7 @@ public class MyselfFragment extends Fragment implements View.OnClickListener {
         myself_setting_img = view.findViewById(R.id.myself_setting_img);
         myself_setting_img.setOnClickListener(this);
         myself_id_text = view.findViewById(R.id.myself_id_text);
+        myself_id_text.setText(blockId);
         //交易记录
         myself_jy = view.findViewById(R.id.myself_jy);
         myself_jy.setOnClickListener(this);

@@ -49,7 +49,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="16px"
-                    android:text="1500.00"
+                    android:text="0.00"
                     android:textColor="#333333"
                     android:textSize="24px" />
 
@@ -58,7 +58,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="16px"
-                    android:text="≈¥150.00"
+                    android:text="≈¥0.00"
                     android:textColor="#666666"
                     android:textSize="20px" />
 
@@ -111,7 +111,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="16px"
-                    android:text="500.00"
+                    android:text="0.00"
                     android:textColor="#333333"
                     android:textSize="24px" />
 
@@ -120,7 +120,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="16px"
-                    android:text="≈¥50.00"
+                    android:text="≈¥0.00"
                     android:textColor="#666666"
                     android:textSize="20px" />
 
@@ -174,7 +174,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="16px"
-                    android:text="4500.00"
+                    android:text="0.00"
                     android:textColor="#333333"
                     android:textSize="24px" />
 
@@ -183,7 +183,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="16px"
-                    android:text="≈¥450.00"
+                    android:text="≈¥0.00"
                     android:textColor="#666666"
                     android:textSize="20px" />
 
